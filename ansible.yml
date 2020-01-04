@@ -4,6 +4,13 @@
   tasks:
     - name: install apache
       yum:
-        name: httpd
+        name: 
+          - httpd
+          - mod_ssl
+          - mod_wsgii
         state: present
-
+    - name: start and enable service of apache service  
+      service:
+        name: httpd
+        state: started
+        enabled: true
