@@ -1,0 +1,9 @@
+---
+- name: It's a basic yaml file
+  hosts: 192.168.1.12
+  tasks:
+    - name: install apache
+      yum:
+        name: httpd
+        state: present
+
